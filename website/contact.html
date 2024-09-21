@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <a href="index.html" class="logo">Interior Experts</a>
+
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="feedback.html">feedback</a></li>
+
+
+        </ul>
+<a href="feedback.html"><button class="feedback">Feedback</button></a>
+<a href="login.html"><button class="login">Login-In</button></a>
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+            <i class="uil uil-search search-icon"></i>
+            <input type="text" placeholder="Search here..." />
+        </div>
+    </nav>
+    <br><br><br><br><br>
+
+    <div class="container">
+        <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+                <h2>Contact Us</h2>
+                <input type="text" id="name" class="field" placeholder="Your Name" required>
+                <input type="email" id="email" class="field" placeholder="Your Email" required>
+                <input type="text" id="phone" class="field" placeholder="Phone" required>
+                <textarea id="message" placeholder="Message" class="field" required></textarea>
+                <button class="btn" id="sendBtn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sendBtn').addEventListener('click', function() {
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value ;
+            
+            if (!name || !email || !phone || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            const userInfo = {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            };
+            localStorage.setItem('contactInfo', JSON.stringify(userInfo));
+
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('message').value = '';
+
+            alert('Your message has been sent!');
+        });
+    </script>
+</body>
+</html>

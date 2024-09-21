@@ -1,0 +1,129 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 200px;
+    background: rgba(0, 0, 0, 0.479);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+.nav,
+.nav .nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav {
+    justify-content: space-between;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.nav .logo {
+    font-size: 22px;
+    font-weight: 500;
+}
+.nav .nav-links {
+    column-gap: 20px;
+    list-style: none;
+}
+.nav .nav-links a {
+    transition: all 0.2s linear;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    position: relative; 
+    overflow: hidden; 
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('feedback\ pic.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); 
+    z-index: -1; 
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    position: relative; 
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 1.2rem;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+#submitbutton {
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

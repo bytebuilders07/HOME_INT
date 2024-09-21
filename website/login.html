@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>login page</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <a href="index.html" class="logo">Interior Experts</a>
+
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="feedback.html">feedback</a></li>
+
+
+        </ul>
+<a href="feedback.html"><button class="feedback">Feedback</button></a>
+<a href="login.html"><button class="login">Login-In</button></a>
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+            <i class="uil uil-search search-icon"></i>
+            <input type="text" placeholder="Search here..." />
+        </div>
+    </nav>
+<br><br><br><br><br>
+<Section style="background-color: #dadada;
+background-position: center; ">
+
+<body>
+    <div class="wrapper">
+       <div class="title">
+          Login
+       </div>
+       <form action="#">
+          <div class="field">
+             <input type="text" id="Lemail" required>
+             <label>Email Address</label>
+          </div>
+          <div class="field">
+             <input type="password" id="Lpass" required>
+             <label>Password</label>
+          </div>
+          <div class="content">
+             <div class="checkbox">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+             </div>
+             <div class="pass-link">
+                <a href="#">Forgot password?</a>
+             </div>
+          </div>
+          <div class="field">
+             <input type="submit" onclick="Login()" value="Login">
+          </div>
+          <div class="signup-link">
+             Not a member? <a href="register.html">Signup now</a>
+          </div>
+       </form>
+    </div>
+</section>
+ </body>
+ <bbr><br><br><br></bbr>
+ <footer class="site-footer">
+   <div class="container">
+     <div class="row">
+       <div class="col-sm-12 col-md-6">
+         <h6>About</h6>
+         <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+       </div>
+
+    
+
+       <div class="col-xs-6 col-md-3">
+         <h6>Quick Links</h6>
+         <ul class="footer-links">
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about us</a></li>
+          <li><a href="product.html">product</a></li>
+          <li><a href="contact.html">contact us</a></li>
+          <li><a href="feedback.html">feedback</a></li>
+          <li><a href="login.html">login</a></li>
+         </ul>
+       </div>
+     </div>
+     <hr>
+   </div>
+     <div class="col-md-4 col-sm-6 col-xs-12">
+      <ul class="social-icons">
+        <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="youtube" href="
+          http://aptech-education.com.pk/ "><i class="fab fa-youtube"></i></a></li>
+      
+        <li><a class="linkedin" href="https://pk.linkedin.com/company/aptech-education-pakistan"><i class="fab fa-linkedin"></i></a></li>   
+    </ul>
+    
+       </div>
+     </div>
+   </div>
+</footer>
+<script>
+  let Lemail = document.getElementById("Lemail")
+  let Lpass = document.getElementById("Lpass")
+
+  function Login(){
+    check = JSON.parse(localStorage.getItem("Register"))
+    check.forEach(element => {
+
+      if(element.Remail == Lemail.value && element.Rpass == Lpass.value){
+        alert("login successfully")
+      }
+      else{
+        alert("email or password incorrect")
+      }
+    });
+  }
+</script>
+</html>
+
+</Section>
